@@ -1,87 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ADAMO SERVICE — Quincaillerie & Services</title>
-<meta name="description" content="ADAMO SERVICE — Quincaillerie générale, impression, documents, plans, devis et gestion des loyers à N'Douci.">
-<style>
-:root{--blue:#062b88;--blue2:#0b56d0;--gold:#f5b400;--dark:#07142e;--light:#f5f8ff;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:#14213d}
-a{text-decoration:none;color:inherit}.top{background:var(--dark);color:#fff;text-align:center;padding:9px;font-size:14px}
-header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 3px 18px #0001}
-.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:13px 18px;gap:20px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--blue);font-size:22px}
-.mark{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#18a0ff);display:grid;place-items:center;color:var(--gold);font-weight:900;border:3px solid var(--gold)}
-nav{display:flex;gap:18px;flex-wrap:wrap;font-weight:700;font-size:14px}nav a:hover{color:var(--blue2)}
-.hero{background:linear-gradient(135deg,#061a4d,#0a55c7);color:#fff}
-.hero-inner{max-width:1180px;margin:auto;padding:70px 18px 78px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
-.badge{display:inline-block;background:#ffffff16;border:1px solid #ffffff44;padding:8px 12px;border-radius:30px;font-weight:700}
-h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:18px 0 12px}h1 span{color:var(--gold)}
-.hero p{font-size:19px;line-height:1.6;max-width:720px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.btn{display:inline-block;padding:14px 20px;border-radius:10px;font-weight:900}.primary{background:var(--gold);color:#151515}.secondary{border:1px solid #fff8;color:#fff}
-.hero-card{background:#fff;color:#14213d;border-radius:22px;padding:26px;box-shadow:0 18px 50px #0004}.hero-card h3{margin-top:0;color:var(--blue)}
-section{max-width:1180px;margin:auto;padding:60px 18px}section h2{font-size:34px;margin:0 0 10px;color:var(--blue)}.lead{color:#596780;max-width:760px;line-height:1.6}
-.services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}.service{background:#fff;border-radius:16px;padding:22px;box-shadow:0 7px 25px #12204d12;border:1px solid #e4eaf5}.ico{font-size:30px}.service h3{margin:12px 0 8px}.service p{color:#64708a;line-height:1.5;font-size:14px}
-.products{background:#fff;max-width:none}.products-inner{max-width:1180px;margin:auto;padding:60px 18px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}.card{background:#fff;border:1px solid #e6eaf2;border-radius:16px;overflow:hidden;box-shadow:0 7px 25px #12204d10}.card img{width:100%;height:220px;object-fit:cover;background:#eee}.card-body{padding:15px}.tag{font-size:12px;font-weight:800;color:var(--blue2);text-transform:uppercase}.card h3{margin:7px 0 5px;font-size:17px}.card p{margin:0;color:#68758c;font-size:13px;line-height:1.45}
-.cta{background:linear-gradient(135deg,#071b51,#0c63d8);color:#fff;border-radius:24px;padding:36px;margin-top:15px;display:flex;justify-content:space-between;gap:20px;align-items:center}.cta h2{color:#fff;margin:0 0 8px}.cta p{margin:0;color:#e7efff}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}.box{background:#fff;border-radius:18px;padding:25px;box-shadow:0 7px 25px #12204d10}.line{padding:12px 0;border-bottom:1px solid #edf0f5}.line:last-child{border-bottom:0}
-footer{background:#06142e;color:#dfe8ff;padding:28px 18px;text-align:center}footer strong{color:#fff}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}nav{display:none}}
-@media(max-width:560px){.services,.grid{grid-template-columns:1fr}.card img{height:250px}.hero-inner{padding-top:48px}.cta{display:block}.cta .btn{margin-top:18px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ADAMO SERVICE - Quincaillerie, impression, services numériques, immobilier et construction à N'douci.">
+  <meta name="theme-color" content="#0b7a53">
+  <title>ADAMO SERVICE | N'douci</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="top">📍 N'Douci — Grande Marché &nbsp; | &nbsp; 📞 07 58 56 41 11</div>
-<header><div class="nav">
-<a class="brand" href="#"><div class="mark">A</div> ADAMO SERVICE</a>
-<nav><a href="#accueil">Accueil</a><a href="#services">Services</a><a href="#produits">Produits</a><a href="#contact">Contact</a></nav>
-</div></header>
+  <header class="site-header" id="accueil">
+    <nav class="navbar container">
+      <a class="brand" href="#accueil" aria-label="ADAMO SERVICE">
+        <span class="brand-mark">AS</span>
+        <span>
+          <strong>ADAMO<span>_SERVICE</span></strong>
+          <small>N'DOUCI GRANDE MARCHÉ</small>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#quincaillerie">Quincaillerie</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-<main>
-<section id="accueil" class="hero"><div class="hero-inner">
-<div>
-<span class="badge">QUINCAILLERIE GÉNÉRALE • SERVICES</span>
-<h1>Tout pour le <span>bâtiment</span> et vos démarches.</h1>
-<p>ADAMO SERVICE vous accompagne à N'Douci pour la quincaillerie, les équipements électriques, la peinture, la plomberie, l'impression, les documents, les plans et devis.</p>
-<div class="buttons"><a class="btn primary" href="#produits">Voir nos produits</a><a class="btn secondary" href="https://wa.me/2250758564111">💬 WhatsApp</a></div>
-</div>
-<div class="hero-card"><h3>ADAMO SERVICE</h3><p><b>Quincaillerie Générale de N'Douci</b></p><p>Des produits utiles pour vos travaux et votre maison, avec également nos services administratifs et numériques.</p><hr><p>📞 <b>07 58 56 41 11</b></p><p>📍 Grande Marché à la Terrasse, N'Douci</p></div>
-</div></section>
+    <div class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">VOTRE SERVICE DE PROXIMITÉ À N'DOUCI</p>
+        <h1>Bienvenue chez <span>ADAMO SERVICE</span></h1>
+        <p class="hero-text">
+          Quincaillerie, impression, services numériques, documents, immobilier,
+          construction et bien plus encore.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/2250758564111?text=Bonjour%20ADAMO%20SERVICE%2C%20je%20voudrais%20avoir%20des%20informations." target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn btn-light" href="tel:+2250758564111">📞 Appeler</a>
+        </div>
+        <div class="hero-note">📍 N'douci Grande Marché · 🚚 Livraison à N'douci</div>
+      </div>
 
-<section id="services"><h2>Nos services</h2><p class="lead">Une seule adresse pour plusieurs besoins du quotidien et du bâtiment.</p>
-<div class="services">
-<div class="service"><div class="ico">🧰</div><h3>Quincaillerie</h3><p>Serrures, cadenas, accessoires, équipements et divers articles pour la maison et le chantier.</p></div>
-<div class="service"><div class="ico">💡</div><h3>Électricité</h3><p>Ampoules LED, multiprises, câbles et accessoires électriques.</p></div>
-<div class="service"><div class="ico">🖨️</div><h3>Impression & documents</h3><p>Impression, photocopie, création de documents, reçus personnalisés et affiches.</p></div>
-<div class="service"><div class="ico">📐</div><h3>Plans & devis</h3><p>Création de plans et devis pour vos projets de construction.</p></div>
-<div class="service"><div class="ico">💻</div><h3>Inscription en ligne</h3><p>Accompagnement pour vos démarches et inscriptions en ligne.</p></div>
-<div class="service"><div class="ico">🏠</div><h3>Gestion des loyers</h3><p>Documents et accompagnement pour la gestion des loyers.</p></div>
-<div class="service"><div class="ico">🎨</div><h3>Peinture</h3><p>Peintures et produits pour vos travaux intérieurs et extérieurs.</p></div>
-<div class="service"><div class="ico">🚿</div><h3>Plomberie</h3><p>Équipements et accessoires pour vos installations.</p></div>
-</div></section>
+      <div class="hero-card">
+        <div class="hero-logo">AS</div>
+        <h2>ADAMO<span>_SERVICE</span></h2>
+        <p>QUINCAILLERIE &amp; DIVERS</p>
+        <div class="mini-list">
+          <span>🖨️ Impression</span>
+          <span>🌐 Inscription en ligne</span>
+          <span>🏠 Immobilier</span>
+          <span>📐 Construction</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<div class="products" id="produits"><div class="products-inner">
-<h2>Quelques produits disponibles</h2><p class="lead">Voici une sélection photographiée dans votre boutique. Les prix et disponibilités peuvent varier : contactez-nous pour confirmer.</p>
-<div class="grid">
-<div class="card"><img src="images/serrure-lincy.jpg"><div class="card-body"><span class="tag">Serrurerie</span><h3>Serrure LINcy</h3><p>Serrure de porte avec clés.</p></div></div>
-<div class="card"><img src="images/serrure-porte.jpg"><div class="card-body"><span class="tag">Serrurerie</span><h3>Serrure de porte</h3><p>Modèle de serrure pour installation.</p></div></div>
-<div class="card"><img src="images/multiprise-usb.jpg"><div class="card-body"><span class="tag">Électricité</span><h3>Multiprise USB</h3><p>Bloc multiprise avec ports USB.</p></div></div>
-<div class="card"><img src="images/ampoule-led-mz.jpg"><div class="card-body"><span class="tag">Éclairage</span><h3>Ampoule LED MZ</h3><p>Éclairage LED économique.</p></div></div>
-<div class="card"><img src="images/ampoule-led-011.jpg"><div class="card-body"><span class="tag">Éclairage</span><h3>Ampoule LED 011</h3><p>Ampoule LED à économie d'énergie.</p></div></div>
-<div class="card"><img src="images/boites-tim.jpg"><div class="card-body"><span class="tag">Quincaillerie</span><h3>Articles TIM</h3><p>Produits et accessoires disponibles en stock.</p></div></div>
-<div class="card"><img src="images/cable-electrique.jpg"><div class="card-body"><span class="tag">Électricité</span><h3>Câble électrique</h3><p>Câble électrique en rouleau.</p></div></div>
-<div class="card"><img src="images/cadenas-ciesa.jpg"><div class="card-body"><span class="tag">Serrurerie</span><h3>Cadenas CIESA</h3><p>Cadenas de sécurité.</p></div></div>
-<div class="card"><img src="images/peinture-super-plus.jpg"><div class="card-body"><span class="tag">Peinture</span><h3>Super Plus — SNPC</h3><p>Peinture acrylique pour intérieur et extérieur.</p></div></div>
-<div class="card"><img src="images/evier.jpg"><div class="card-body"><span class="tag">Plomberie</span><h3>Évier</h3><p>Équipement pour cuisine et installation sanitaire.</p></div></div>
-</div>
-<div class="cta"><div><h2>Vous cherchez un produit ?</h2><p>Envoyez-nous une photo ou le nom de l'article sur WhatsApp.</p></div><a class="btn primary" href="https://wa.me/2250758564111?text=Bonjour%20ADAMO%20SERVICE%2C%20je%20cherche%20un%20produit.">Demander sur WhatsApp</a></div>
-</div></div>
+  <main>
+    <section class="quick container">
+      <a href="#services"><b>🛠️</b><span>Nos services</span></a>
+      <a href="#quincaillerie"><b>🔨</b><span>Quincaillerie</span></a>
+      <a href="https://wa.me/2250758564111" target="_blank" rel="noopener"><b>💬</b><span>WhatsApp</span></a>
+      <a href="tel:+2250758564111"><b>📞</b><span>Nous appeler</span></a>
+    </section>
 
-<section id="contact"><h2>Contact</h2><p class="lead">Passez nous voir ou contactez-nous directement.</p>
-<div class="contact"><div class="box"><h3>ADAMO SERVICE</h3><div class="line">📍 <b>Adresse :</b> N'Douci, Grande Marché à la Terrasse</div><div class="line">📞 <b>Téléphone :</b> 07 58 56 41 11</div><div class="line">💬 <b>WhatsApp :</b> disponible</div></div>
-<div class="box"><h3>Nos prestations</h3><div class="line">🧰 Quincaillerie générale</div><div class="line">🖨️ Impression & photocopie</div><div class="line">📄 Documents & reçus personnalisés</div><div class="line">📐 Plans & devis de construction</div><div class="line">💻 Inscription en ligne</div></div></div>
-</section>
-</main>
-<footer>© 2026 <strong>ADAMO SERVICE</strong> — Quincaillerie Générale de N'Douci • 07 58 56 41 11</footer>
-</body></html>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CE QUE NOUS FAISONS</p>
+          <h2>Nos services</h2>
+          <p>Des services pratiques, réunis au même endroit.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card"><div class="icon">🔨</div><h3>Quincaillerie &amp; divers</h3><p>Articles de construction et produits divers, vente en gros et au détail.</p></article>
+          <article class="service-card"><div class="icon">🖨️</div><h3>Impression</h3><p>Impression et préparation de documents pour vos besoins professionnels ou personnels.</p></article>
+          <article class="service-card"><div class="icon">🌐</div><h3>Inscription en ligne</h3><p>Accompagnement pour différentes démarches et inscriptions en ligne.</p></article>
+          <article class="service-card"><div class="icon">💳</div><h3>Dépôt &amp; retrait</h3><p>Services de proximité pour les opérations de paiement disponibles en agence.</p></article>
+          <article class="service-card"><div class="icon">🏠</div><h3>Agent immobilier</h3><p>Accompagnement pour la recherche, la location et les projets immobiliers.</p></article>
+          <article class="service-card"><div class="icon">📐</div><h3>Plans 2D &amp; 3D</h3><p>Création de plans de construction 2D et 3D pour vos projets.</p></article>
+          <article class="service-card"><div class="icon">📄</div><h3>Documents</h3><p>Création et mise en forme de documents, exposés et dossiers administratifs.</p></article>
+          <article class="service-card"><div class="icon">🔳</div><h3>QR Code</h3><p>Création de QR Codes pour vos contacts, services et activités.</p></article>
+          <article class="service-card"><div class="icon">⚖️</div><h3>Documents administratifs</h3><p>Accompagnement pour casier judiciaire, certificat de nationalité et autres démarches.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="quincaillerie">
+      <div class="container product-layout">
+        <div>
+          <p class="eyebrow">ADAMO SERVICE</p>
+          <h2>Quincaillerie &amp; divers</h2>
+          <p class="lead">Besoin d'un article de construction ou d'un produit divers ? Écrivez-nous directement sur WhatsApp pour demander la disponibilité et le prix.</p>
+          <div class="chips">
+            <span>Vente en gros</span>
+            <span>Vente au détail</span>
+            <span>Livraison à N'douci</span>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/2250758564111?text=Bonjour%20ADAMO%20SERVICE%2C%20je%20cherche%20un%20article%20de%20quincaillerie." target="_blank" rel="noopener">🛒 Demander un article</a>
+        </div>
+        <div class="product-box">
+          <div class="product-symbol">🔨</div>
+          <h3>Commande rapide</h3>
+          <p>Envoyez le nom de l'article recherché. Nous vous répondrons avec les informations disponibles.</p>
+          <a href="tel:+2250758564111">07 58 56 41 11</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apropos">
+      <div class="container about">
+        <div class="about-card">
+          <span class="about-badge">ADAMO SERVICE</span>
+          <h2>Un seul endroit pour plusieurs besoins</h2>
+          <p>
+            ADAMO SERVICE est un espace de proximité à N'douci dédié à la
+            quincaillerie, aux services numériques, à l'impression, aux documents,
+            à l'immobilier et à l'accompagnement des projets de construction.
+          </p>
+          <ul>
+            <li>✔️ Service de proximité</li>
+            <li>✔️ Commande et renseignements par WhatsApp</li>
+            <li>✔️ Vente en gros et au détail</li>
+            <li>✔️ Livraison à N'douci</li>
+          </ul>
+        </div>
+        <div class="contact-panel">
+          <p class="eyebrow">CONTACT</p>
+          <h2>Parlons de votre besoin</h2>
+          <p>Une question, une commande ou un document à préparer ? Contactez ADAMO SERVICE.</p>
+          <div class="contact-line">📍 <span>N'douci Grande Marché</span></div>
+          <div class="contact-line">📞 <a href="tel:+2250758564111">07 58 56 41 11</a></div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://wa.me/2250758564111" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=ADAMO%20SERVICE%20N%27douci%20Grande%20March%C3%A9" target="_blank" rel="noopener">📍 Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow">BESOIN D'UN SERVICE ?</p>
+          <h2>Contactez ADAMO SERVICE maintenant.</h2>
+          <p>Réponse rapide par WhatsApp ou par téléphone.</p>
+        </div>
+        <a class="btn btn-light btn-large" href="https://wa.me/2250758564111?text=Bonjour%20ADAMO%20SERVICE%2C%20je%20viens%20de%20votre%20site." target="_blank" rel="noopener">💬 Écrire sur WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">ADAMO<span>_SERVICE</span></div>
+        <p>Quincaillerie &amp; divers · Services de proximité à N'douci.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>📍 N'douci Grande Marché</p>
+        <p>📞 <a href="tel:+2250758564111">07 58 56 41 11</a></p>
+      </div>
+      <div>
+        <h3>Liens rapides</h3>
+        <p><a href="#services">Services</a></p>
+        <p><a href="#quincaillerie">Quincaillerie</a></p>
+        <p><a href="#apropos">À propos</a></p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> ADAMO_SERVICE — Tous droits réservés.</div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/2250758564111?text=Bonjour%20ADAMO%20SERVICE%2C%20je%20voudrais%20avoir%20des%20informations." target="_blank" rel="noopener" aria-label="Contacter ADAMO SERVICE sur WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
