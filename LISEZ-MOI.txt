@@ -1,0 +1,4 @@
+ADAMO SERVICE — SITE WEB V2
+Ouvrir index.html dans un navigateur pour tester le site.
+Les photos envoyées sont intégrées dans le catalogue.
+Pour publier le site sur Internet, il faudra ensuite choisir un hébergeur et un nom de domaine.
